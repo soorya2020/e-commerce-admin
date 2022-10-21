@@ -1,0 +1,74 @@
+{{!-- <section>
+      <div class="container  mt-5 mb-5">
+        <div class="row">
+          {{#each products}}
+            <div class="col-12 col-md-6 col-lg-3 mt-4 "  >
+              <div class="card bg-light p-2 text-center lh-sm" style="width: 18rem">
+                <img style="width:17em;height:auto;"  src="../product-images/{{this._id}}.jpg" class="img-fluid card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fs-4">{{this.name}}</h5>
+                  <p class=" fw-bold fs-4 card-text">₹ {{this.price}}</p>
+                  {{#if value}}
+                  <a onclick=alert('sdf') href="#" class="btn btn-primary">Buy Now</a>
+                  {{else}}
+                  <a onclick=alert('dsf') href="#" class="btn btn-primary">Login to buy</a>
+                  {{/if}}
+                </div>
+              </div>
+            </div>
+          {{/each}}
+          
+        </div>
+      </div>
+</section> --}}
+
+
+
+
+
+
+
+   
+    <section>
+      <div class="container mt-5 mb-5">
+        <div class="row">
+          {{#if value}}
+          {{#each products}}
+            <div  class="col-12 col-md-6 col-lg-3 mt-4"  >
+              <div  class="card bg-light p-2 text-center lh-sm" style="width: 18rem">
+                <img style="width:17em;height:auto;" src="../product-images/{{this._id}}.jpg" class="img-fluid card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fs-4">{{this.name}}</h5>
+                  <p class=" fw-bold fs-4 card-text">₹ {{this.price}}</p>
+                  <a onclick="alertme()" href="#" class="btn btn-primary">Buy Now</a>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+          {{else}}
+         {{#each products}}
+            <div class="col-12 col-md-6 col-lg-3 mt-4"  >
+              <div class="card bg-light p-2 text-center lh-sm" style="width: 18rem">
+                <img style="width:17em;height:auto;" src="../product-images/{{this._id}}.jpg" class="img-fluid card-img-top" alt="..." />
+                <div class="card-body">
+                  <h5 class="card-title fs-4">{{this.name}}</h5>
+                  <p class="fw-bold fs-4 card-text">₹ {{this.price}}</p>
+                  <a onclick="alertme()" href="/login" class="btn btn-primary">login to Buy</a>
+                </div>
+              </div>
+            </div>
+          {{/each}}
+          {{/if}}
+        </div>
+      </div>
+    </section>
+
+
+<style>
+
+</style>
+<script>
+  function alertme(){
+    alert('under maintainance! please co-operate')
+  }
+</script>

@@ -1,0 +1,40 @@
+<div class="container">
+                        <div class="row">
+                            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                <form action="/admin/add-product" enctype="multipart/form-data" method="post" role="form" >
+                                    <legend>Add your products here</legend>
+                    
+                                    <div class="form-group">
+                                        <label  for="first_name"> Name</label>
+                                        <input required type="text" class="form-control" name="name"  placeholder="Name">
+                                    </div>
+                    
+                                    <div class="form-group">
+                                        <label for="name">Category</label>
+                                        <input type="text" class="form-control" name="category"  placeholder="Category">
+                                    </div>
+                    
+                                    <div class="form-group">
+                                        <label aria-required="" for="price">Price</label>
+                                        <input type="number" class="form-control" name="price"  placeholder="Price">
+                                    </div>
+                    
+                                    <div class="form-group">
+                                        <label for="description">Description</label>
+                                        <input type="text" class="form-control" name="description" placeholder="Description">
+                                    </div>
+                    
+                                    <div class="form-group">
+                                        <label for="image">Image</label>
+                                        <input required type="file"  class="form-control" name="image" >
+                                    </div>
+                    
+                                    {{!-- <button type="submit" class="btn btn-primary">Submit</button> --}}
+                                    <div class="modal-footer">
+                                        <button type="button"  class="btn btn-secondary" data-dismiss="modal"><a href="/admin/">Cancel</a> </button>
+                                        <button type="submit" class="btn btn-primary">ADD</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>

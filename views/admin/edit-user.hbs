@@ -1,0 +1,26 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <form action="/admin/edit-user/{{user._id}}"  method="post" role="form" >
+              
+                <legend>Change <strong>{{user.Name}}</strong>  here</legend>
+
+                <div class="form-group">
+                    <label for="first_name"> Name</label>
+                    <input required type="text" class="form-control" name="Name" value="{{user.Name}}"  placeholder="Name">
+                </div>
+
+                <div class="form-group">
+                    <label for="name">Email</label>
+                    <input required type="email" class="form-control" name="Email"  value="{{user.Email}}"  placeholder="email@gmail.com">
+                </div>
+
+                <div>
+                    <button type="submit" class="btn btn-primary">Done</button>
+                </div>
+
+                
+            </form>
+        </div>
+    </div>
+</div>
